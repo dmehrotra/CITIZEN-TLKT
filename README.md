@@ -1,4 +1,4 @@
-cnf ?= config.env
+``` cnf ?= config.env
 include $(cnf)
 export $(shell sed 's/=.*//' $(cnf))
 
@@ -42,3 +42,4 @@ pull_dispatch_audio:
 pull_dispatch_text:
 # 		make check_audio_progress
 		python3 run.py transcribe_dispatch --data_path "data/outputs"  --open_ai_key ${OPEN_AI_KEY}
+```
